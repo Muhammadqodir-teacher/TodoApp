@@ -12,8 +12,8 @@
     justify-content: center;
 }
 .main{
-    width: 450px;
-    height: 500px;
+    width: 500px;
+    height: 550px;
     background:#ffffff;
   border-radius: 20px;
     border-radius: 12px;
@@ -65,6 +65,19 @@
     border-radius: 6px;
     font-size: 20px;
     margin-right:8px;
+    gap: 10px;
+}
+.elementBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.newInput{
+    flex: 1;
+    padding: 3px 5px;
+    border: 1px solid #000000;
+    outline: none;
 }
 .collect::-webkit-scrollbar {
     width: 14px;
