@@ -20,9 +20,25 @@
                 <input type="text" placeholder="Write someting ..." id="data">
                 <button class="BtnAdd">Add</button>
             </form>
+
+            <div class="searchBox">
+                <input type="search" onkeyup="searchFunction()" placeholder="Search ...." class="search">
+                <button class="daleteAll">Dalete All</button>
+            </div>
             <div class="collect"></div>
         </main>
     </section>
+
+    <div class="modal__container">
+        <div class="modal__element">
+            <h1 class="modal__title">Should all information be deleted ?</h1>
+
+            <div class="modal__bns">
+                <button class="modal__nobtn">No, dalete</button>
+                <button class="modal__yesbtn">Yes, dalete</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src="script.js"></script>

@@ -2,6 +2,11 @@ const data = document.getElementById("data");
 const form = document.getElementById("form");
 const BtnAdd = document.querySelector(".BtnAdd");
 const collect = document.querySelector(".collect");
+const searech = document.querySelector(".search");
+const daleteAll = document.querySelector(".daleteAll");
+const modal = document.querySelector(".modal__container");
+const modalBtnYes = document.querySelector(".modal__yesbtn");
+const modalBtnNo = document.querySelector(".modal__nobtn");
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -12,11 +17,14 @@ BtnAdd.addEventListener("click", () => {
         alert("Enter something");
     }
 
-    const element = document.createElement("h1");
+    const element = document.createElement("div");
     element.className = "element";
-    element.textContent = data.value;
-
     collect.prepend(element);
+
+
+    const text = document.createElement("p");
+    text.textContent = data.value;
+    element.prepend(text);
 
     const elementBox = document.createElement("div");
     elementBox.classList = "elementBox";
@@ -40,6 +48,19 @@ BtnAdd.addEventListener("click", () => {
     newInput.style.display = "none";
     element.prepend(newInput);
 
+    daleteAll.addEventListener('click', () => {
+        modal.style.display = "flex";
+    });
+
+    modalBtnYes.addEventListener('click', () =>{
+        collect.innerHTML = "";
+        modal.style.display = "none"
+    });
+
+    modalBtnNo.addEventListener('click', () =>{
+        modal.style.display = "none"
+    });
+
     editIcon.addEventListener("click", () => {
         const oldText = element.childNodes[1].textContent;
         newInput.value = oldText;
@@ -61,9 +82,16 @@ BtnAdd.addEventListener("click", () => {
         editIcon.style.display = "block";
     });
 
+
+
     deleteIcon.addEventListener("click", () => {
         element.remove();
     });
 
     data.value = "";
 });
+
+
+function searchFuncsion() {
+
+}
