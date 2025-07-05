@@ -23,6 +23,7 @@ BtnAdd.addEventListener("click", () => {
 
 
     const text = document.createElement("p");
+    text.classList = "text"
     text.textContent = data.value;
     element.prepend(text);
 
@@ -92,6 +93,17 @@ BtnAdd.addEventListener("click", () => {
 });
 
 
-function searchFuncsion() {
+function searchFunction() {
+    let filter = searech.value.toUpperCase();
+    let elements = document.querySelectorAll(".element"); // barcha todo elementlari
 
+    for (let i = 0; i < elements.length; i++) {
+        let text = elements[i].querySelector("p").textContent.toUpperCase();
+        if (text.includes(filter)) {
+            elements[i].style.display = "flex"; // yoki "block"
+        } else {
+            elements[i].style.display = "none";
+        }
+    }
 }
+
