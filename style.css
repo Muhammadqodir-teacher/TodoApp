@@ -169,6 +169,12 @@
     background: #7fff00;
     color: #000000;
 }
+
+.elementText{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 @media only screen and (max-width:470px){
     .main{
         width: 70%;
