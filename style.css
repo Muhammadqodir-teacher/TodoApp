@@ -55,6 +55,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 20px;
 }
 .element{
     padding: 6px 5px;
@@ -175,26 +176,41 @@
     align-items: center;
     gap: 15px;
 }
-@media only screen and (max-width:470px){
-    .main{
-        width: 70%;
-        height: 80%;
-    }
-    #form{
-        gap: 10px;
-    }
-    .collect{
-        width: 100%;
-        overflow-y: scroll; 
-        height: 260px;       
-    }
-    .Todo__title{
-        font-size: 30px;
-    }
-    #data{
-        font-size: 13px;
-    }
-    .BtnAdd{
-        font-size: 13px;
-    }
+@media only screen and (min-width:1150px){
+   .main{
+       width: 650px;
+       height: 600px;
+   }
+   .Todo__title{
+       font-size: 50px;
+   }
+   #data{
+       height: 40px;
+       font-size: 20px;
+   }
+   .BtnAdd{
+       height: 40px;
+       font-size: 20px;
+   }
+   .search{
+       height: 40px;
+       font-size: 20px;
+   }
+   .daleteAll{
+       height: 40px;
+       font-size: 20px;
+   }
+   .text{
+       font-size: 30px;
+   }
+   .time{
+       font-size: 30px;
+   }
+   .modal__element{
+       width: 350px;
+       height: 200px;
+   }
+   .modal__title{
+       font-size: 32px;
+   }
 }

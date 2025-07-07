@@ -25,6 +25,7 @@ BtnAdd.addEventListener("click", () => {
         element.prepend(elementText);
         // check input
         const complate = document.createElement("input");
+        complate.classList = "complate"
         complate.setAttribute("type", "checkbox");
         elementText.appendChild(complate);
         // check input event
@@ -42,12 +43,13 @@ BtnAdd.addEventListener("click", () => {
         elementText.appendChild(text);
         // data time
         const time = document.createElement("p");
+        time.classList = "time";
         let localData = new Date();
         let hours = (localData.getHours());
         let minutes = (localData.getMinutes());
         let seconds = (localData.getSeconds());
-        time.textContent = `${hours} : ${minutes} : ${seconds}`
-        element.appendChild(time)
+        time.textContent = `${hours} : ${minutes} : ${seconds}`;
+        element.appendChild(time);
         // edit dalet icons div
         const elementBox = document.createElement("div");
         elementBox.classList = "elementBox";
